@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793254268987",
+    "project_id": "tempo-to-do-app-k3vkln",
+    "storage_bucket": "tempo-to-do-app-k3vkln.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793254268987:android:9ce78583e3fa1da2ae0c1e",
+        "android_client_info": {
+          "package_name": "com.tempotodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcup1f6qTFsTwebT17aqAjN21HgnfHTwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
