@@ -5,4 +5,4 @@ export '/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/completed_tasks_page/completed_tasks_page_widget.dart'
     show CompletedTasksPageWidget;
 export '/details/details_widget.dart' show DetailsWidget;
-export '/logout/logout_widget.dart' show LogoutWidget;
+export '/profile/profile_widget.dart' show ProfileWidget;

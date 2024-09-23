@@ -120,11 +120,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'logout',
-          path: '/logout',
+          name: 'Profile',
+          path: '/profile',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'logout')
-              : const LogoutWidget(),
+              ? const NavBarPage(initialPage: 'Profile')
+              : const ProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
