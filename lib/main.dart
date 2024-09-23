@@ -122,7 +122,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'TasksPage': const TasksPageWidget(),
       'CompletedTasksPage': const CompletedTasksPageWidget(),
-      'logout': const LogoutWidget(),
+      'Profile': const ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -159,7 +159,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.logout,
+              Icons.person_outline,
               size: 24.0,
             ),
             label: 'Home',
