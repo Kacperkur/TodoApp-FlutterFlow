@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -656,6 +657,7 @@ class _LoginWidgetState extends State<LoginWidget>
                             12.0, 0.0, 12.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
+                            var shouldSetState = false;
                             GoRouter.of(context).prepareAuthEvent();
                             if (_model.signupPasswordFieldTextController.text !=
                                 _model.signupConfirmFieldTextController.text) {
@@ -697,8 +699,25 @@ class _LoginWidgetState extends State<LoginWidget>
                                 !_model.formKey2.currentState!.validate()) {
                               return;
                             }
+                            _model.apiResultOnboardEmail =
+                                await SendEmailCall.call(
+                              to: _model.signupemailFieldTextController.text,
+                              subject: 'Welcome To Tempo To-Do!',
+                              text:
+                                  'Welcome to Tempo To-Do, where we help you stay organized and on top of your tasks! We\'re excited to have you on board—start creating your to-do lists today and boost your productivity effortlessly! Your account will be all set after you set up your profile!',
+                            );
 
-                            context.goNamedAuth('Onboarding', context.mounted);
+                            shouldSetState = true;
+                            if ((_model.apiResultOnboardEmail?.succeeded ??
+                                true)) {
+                              context.pushNamedAuth(
+                                  'Onboarding', context.mounted);
+                            } else {
+                              if (shouldSetState) safeSetState(() {});
+                              return;
+                            }
+
+                            if (shouldSetState) safeSetState(() {});
                           },
                           text: 'Signup',
                           options: FFButtonOptions(

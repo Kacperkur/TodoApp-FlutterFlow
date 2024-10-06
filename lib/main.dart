@@ -162,7 +162,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.person_outline,
               size: 24.0,
             ),
-            label: 'Home',
+            label: 'Profile',
             tooltip: '',
           )
         ],
