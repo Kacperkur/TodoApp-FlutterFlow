@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'login_widget.dart' show LoginWidget;
 import 'package:flutter/material.dart';
@@ -74,6 +75,8 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   late bool loginPasswordFieldVisibility;
   String? Function(BuildContext, String?)?
       loginPasswordFieldTextControllerValidator;
+  // Stores action output result for [Backend Call - API (SendEmail)] action in SignupState widget.
+  ApiCallResponse? apiResultOnboardEmail;
 
   @override
   void initState(BuildContext context) {

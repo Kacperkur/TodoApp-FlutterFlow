@@ -125,6 +125,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'Profile')
               : const ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'Welcome',
+          path: '/welcome',
+          builder: (context, params) => const WelcomeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
